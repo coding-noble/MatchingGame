@@ -83,9 +83,34 @@ button:hover {
 
 .card {
     background-size: contain;
-    background-position: center;
     background-repeat: no-repeat;
+    width: 135px;
     height: 200px;
+}
+
+#difficulty {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    background-color: var(--game-board-bg);
+    color: white;
     border-radius: 5px;
+    padding: 8px 12px;
     cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s, color 0.2s;
+    margin: 0 10px;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #007bff;
+    color: white;
 }

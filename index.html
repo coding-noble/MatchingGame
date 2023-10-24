@@ -14,9 +14,17 @@
 <body>
     <header>
         <h1>Card Matching Game</h1>
-        <div id="score">Score: <span id="scoreValue">0</span></div>
-        <div id="time">Time: <span id="timeValue">00:00</span></div>
+        <div id="score">Matches: <span id="matchesMade">0</span></div>
     </header>
+
+    <div id="difficulty">
+        <input type="radio" name="difficulty" value="easy" id="easy">
+        <label for="easy">Easy</label>
+        <input type="radio" name="difficulty" value="normal" id="normal" checked>
+        <label for="normal">Normal</label>
+        <input type="radio" name="difficulty" value="hard" id="hard">
+        <label for="hard">Hard</label>
+    </div>
 
     <main id="gameBoard"></main>
 

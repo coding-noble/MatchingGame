@@ -84,8 +84,8 @@ button:hover {
 .card {
     background-size: contain;
     background-repeat: no-repeat;
-    width: 135px;
-    height: 200px;
+    width: 7em;
+    height: 10em;
 }
 
 #difficulty {

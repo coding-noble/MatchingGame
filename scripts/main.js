@@ -50,15 +50,13 @@ class Deck {
     }
 }
 
-let startTime;
-let isGameStarted = false;
-let totalMatches;
+let startTime, totalMatches, selectedDifficulty;
 let matchesFound = 0;
 let flippedCards = [];
-let selectedDifficulty;
+
+const difficultyRadios = document.getElementsByName('difficulty');
 
 async function startGame() {
-    const difficultyRadios = document.getElementsByName('difficulty');
     
     for (const radio of difficultyRadios) {
         if (radio.checked) {
@@ -75,14 +73,8 @@ async function startGame() {
     matchesFound = 0;
 
     document.getElementById('matchesMade').textContent = matchesFound;
-
-    if (!isGameStarted) {
-        isGameStarted = true;
-        startTime = new Date().getTime();
-    }
+    startTime = new Date().getTime();
 }
-
-const difficultyRadios = document.getElementsByName('difficulty');
 
 for (const radio of difficultyRadios) {
     radio.addEventListener('change', () => startGame());
